@@ -4411,6 +4411,10 @@
 						"nibbles": {
 							"display_name": "被吸血鬼袭击了！",
 							"tooltip": "啊！它们好吓人！"
+						},
+						"turned_cured": {
+							"display_name": "石炉，你们的皇帝回来了！",
+							"tooltip": "我简直不敢相信！我“死”了，又“活”了！现在我回来了！"
 						}
 					}
 				}
@@ -5642,6 +5646,30 @@
 							"2_description": "他们第二次变成血奴了！他们应该和吸血鬼恋爱？",
 							"3_display_name": "，两界外交官",
 							"3_description": "他们第三次变成血奴了！亡者世界已不再可怕！"
+						},
+						"vampire_killer": {
+							"display_name": "🎃 暗烛节 - 吸血鬼杀手",
+							"description": "在暗烛节活动期间杀死吸血鬼获得！",
+							"1_display_name": "银色之刃",
+							"1_description": "他们杀死了一只吸血鬼！",
+							"6_display_name": "，人形木桩",
+							"6_description": "他们杀死了6只吸血鬼！他们才是真正的午夜之王！",
+							"15_display_name": " 无所畏惧",
+							"15_description": "他们杀了15个吸血鬼！把这些堕落者全部送回地狱！",
+							"40_display_name": "吸血鬼杀手",
+							"40_description": "他们杀了40个吸血鬼！也许他是传说中的“吸血鬼猎人巴菲”！"
+						},
+						"witch_killer": {
+							"display_name": "🎃 暗烛节 - 女巫杀手",
+							"description": "在暗烛节活动期间杀死女巫获得！",
+							"1_display_name": ",女巫猎手学徒",
+							"1_description": "他们杀死了一位女巫！",
+							"4_display_name": "女巫之祸根",
+							"4_description": "他们杀了4个女巫！现在谁害怕睡前故事了？",
+							"10_display_name": "扫帚毁灭者",
+							"10_description": "他们杀了10个女巫！让他们被恐惧淹没吧！",
+							"25_display_name": ",女巫猎人",
+							"25_description": "他们杀了25个女巫！剑上插满了尖尖的帽子！"
 						}
 					}
 				}
@@ -9163,6 +9191,11 @@
 						"description": "制作一个特别的篮子用来存放暗烛节零食和其他的好东西！",
 						"flavor": "它们可以存储零食、甜点、烘培点心和节日美食"
 					},
+					"literary_skull_recipe": {
+						"recipe_name": "暗烛节骷髅 & 书",
+						"description": "几本书，上面放着一个骷髅，不知道什么原因......",
+						"flavor": "为什么我们需要草药师做这玩意儿？！好吧，总得有人会买......"
+					},
 					"vampire_salve_recipe": {
 						"recipe_name": "大蒜龙葵药膏",
 						"description": "治疗吸血鬼咬伤的特效药",
@@ -9767,7 +9800,7 @@
 					"flavor": "很难把所有的骨瓷都做成同样的尺寸.所以我们想出了这个主意!"
 				},
 				"input_cask_clay_small_recipe": {
-					"recipe_name": "小型陶制供应桶",
+					"recipe_name": "小型粘土补给桶",
 					"description": "可以优先存储32件物品。",
 					"flavor": "只能储存液体和干货"
 				},
@@ -12869,6 +12902,36 @@
 						"recipe_name": "暗烛节木棺床",
 						"description": "木制的棺材床！可以给炉民或旅行者休息！非常舒服的一张床！",
 						"flavor": "非常适合长时间休息..."
+					},
+					"banquet_table_old_recipe": {
+						"recipe_name": "暗烛节古典宴会桌",
+						"description": "制作一张别致而相当长的桌子，提供给最完美的宴会厅或餐厅。",
+						"flavor": "或者也许是为了某种秘密会议"
+					},
+					"old_chair_recipe": {
+						"recipe_name": "暗烛节古典椅子",
+						"description": "打造一把舒适、别致的椅子，看起来像是属于一个非常古老而阴森的庄园。",
+						"flavor": "缓解久坐疲劳！"
+					},
+					"old_bench_recipe": {
+						"recipe_name": "暗烛节古典长椅",
+						"description": "一个非常舒适和别致的座位，非常适合装饰你的公共休息室。",
+						"flavor": ""
+					},
+					"bookcase_short_recipe": {
+						"recipe_name": "暗烛节古典矮书架",
+						"description": "买些书，为它们做一个花哨的书架。书架也可以放在墙上。",
+						"flavor": "将它们放置在世界上最伟大的图书馆中！"
+					},
+					"bookcase_tall_recipe": {
+						"recipe_name": "暗烛节古典高书架",
+						"description": "买些书，为它们做一个花哨的书架。",
+						"flavor": "什么？你以为我真的会写这些吗-木匠"
+					},
+					"bookcase_door_recipe": {
+						"recipe_name": "暗烛节隐蔽书柜门",
+						"description": "用一些很酷的机关制作一个书架，可以像开门一样打开它！你自己的秘密通道......",
+						"flavor": "它可以被锁上或打开，敌人看不见它！"
 					}
 				},
 				"wooden_shield_recipe": {
@@ -13527,6 +13590,16 @@
 						"recipe_name": "暗烛节高草堆",
 						"description": " 一个更高的干草堆，高到可以当作迷宫之墙！",
 						"flavor": "我们能堆多少捆干草？"
+					},
+					"decorative_broom_recipe": {
+						"recipe_name": "暗烛节装饰扫帚",
+						"description": "放下一把靠墙的扫帚，假装你确实在扫地！",
+						"flavor": "有时候......"
+					},
+					"decorative_broom_wall_recipe": {
+						"recipe_name": "暗烛节壁挂装饰扫帚",
+						"description": "一把简单而充满邪恶气息的扫帚挂在墙上！",
+						"flavor": "女巫停车的最新解决方案！"
 					}
 				}
 			},
@@ -14355,6 +14428,11 @@
 					"tea_cider_recipe": {
 						"recipe_name": "暗烛节苹果茶",
 						"description": "温暖可口的茶饮，很合适在走廊观赏晚间秋雨的时候品尝…….",
+						"flavor": "暗烛节盛宴开始前必须摆上餐桌"
+					},
+					"bloody_mer_recipe": {
+						"recipe_name": "暗烛节血腥玛丽",
+						"description": "一种美味爽口的酒。传说它是由地狱深渊的使者血手幽灵发明的......",
 						"flavor": "暗烛节盛宴开始前必须摆上餐桌"
 					}
 				}
@@ -15586,6 +15664,13 @@
 				"cobblestone_grate_fence_bar_double": {
 					"display_name": "暗烛节圆石长围栏",
 					"description": "从古至今都被用来阻止亡灵逃出墓地。"
+				},
+				"bookcase_door": {
+					"description": "等一下！这个书架看起来相当可疑......",
+					"iconic": {
+						"display_name": "暗烛节隐蔽书柜门",
+						"description": "非常狡猾！非常神秘！你自己的秘密通道。敌人将无法看到它。"
+					}
 				}
 			},
 			"ladder_rope": {
@@ -18500,11 +18585,11 @@
 				}
 			},
 			"pasture_bed_small": {
-				"display_name": "小型动物寝具",
+				"display_name": "小型牧场寝具",
 				"description": "小型牧场动物将在夜间或恶劣天气中寻找这些寝具."
 			},
 			"pasture_bed": {
-				"display_name": "动物寝具",
+				"display_name": "牧场寝具",
 				"description": "大型牧场动物将在夜间或恶劣天气中寻找这些寝具."
 			},
 			"banquet_table_highland_pine": {
@@ -18825,6 +18910,26 @@
 				"sarcophagus_bed": {
 					"display_name": "暗烛节石墓床",
 					"description": "不是很舒服……甚至有点吓人。但是，还是可以躺进去！"
+				},
+				"banquet_table_old": {
+					"display_name": "暗烛节古典宴会桌",
+					"description": "非常适合舒适的宴会厅或充满神秘生物的黑暗聚会。"
+				},
+				"bookcase_short": {
+					"display_name": "暗烛节古典矮书架",
+					"description": "也可以堆叠或放置在墙上，以创建伟大的图书馆！"
+				},
+				"bookcase_tall": {
+					"display_name": "暗烛节古典高书架",
+					"description": "包含了很多知识。但不包含图书管理员，"
+				},
+				"old_bench": {
+					"display_name": "暗烛节古典长椅",
+					"description": "非常适合炉民彼此用来分享恐怖故事......"
+				},
+				"old_chair": {
+					"display_name": "暗烛节古典椅子",
+					"description": "拥有完整的枕头、靠背和吱吱作响的腿。"
 				}
 			},
 			"pet_urn": {
@@ -20589,6 +20694,18 @@
 				"tombstone_tall": {
 					"display_name": "烛光节高墓碑",
 					"description": "一块施了法的墓碑，周围都是雾。吓人！"
+				},
+				"decorative_broom": {
+					"display_name": "暗烛节装饰扫帚",
+					"description": "不要把它放在门边，否则你的客人可能会觉得它很烦人！"
+				},
+				"decorative_broom_wall": {
+					"display_name": "暗烛节壁挂装饰扫帚",
+					"description": "女巫停车的最新解决方案！"
+				},
+				"literary_skull": {
+					"display_name": "暗烛节骷髅 & 书",
+					"description": "生存还是毁灭：这是一个问题。是吗？"
 				}
 			},
 			"ember_ashes": {
@@ -22554,6 +22671,12 @@
 				"donation_box": {
 					"description": "对丰盛教会的捐赠，慷慨和虔诚的表现。"
 				}
+			},
+			"mutton": {
+				"rotten": {
+					"display_name": "腐烂的羊肉",
+					"description": "可能不适合吃了......"
+				}
 			}
 		},
 		"terrain": {
@@ -24044,7 +24167,7 @@
 			"candledark": {
 				"spirit_bonfire": {
 					"display_name": "暗烛节灵魂篝火",
-					"description": "三个篝火全部点亮能吸引灵魂，确保你的镇民能够到达篝火位置以便夜幕降临时能够顺利点亮它！"
+					"description": "三个篝火全部点亮能吸引灵魂，确保你的镇民能够到达篝火位置以便夜幕降临时能够顺利点亮它，准备迎接几天后到来的袭击！"
 				},
 				"pumpkin_patch": {
 					"display_name": "暗烛节南瓜田",
@@ -24585,7 +24708,7 @@
 				"description": "优先存储32个物品."
 			},
 			"input_cask_clay_small": {
-				"display_name": "小粘土补给桶",
+				"display_name": "小型粘土补给桶",
 				"description": "优先存储32个物品."
 			},
 			"input_cask_stone_small": {
@@ -25841,6 +25964,15 @@
 					"serving": {
 						"display_name": "一杯暗烛节苹果茶",
 						"description": "热乎美味！"
+					}
+				},
+				"bloody_mer": {
+					"iconic_description": "把它放在某个地方，这样炉民就可以自己享用了！",
+					"display_name": "暗烛节血腥玛丽",
+					"description": "一种非常清爽可口的酒，夜猫子们的最爱！",
+					"serving": {
+						"display_name": "一杯血腥玛丽",
+						"description": "冷得就像血手幽灵的手！"
 					}
 				}
 			},
@@ -27776,7 +27908,7 @@
 						"animal": "这种动物饲料能让 [str(servings)] 头动物吃饱"
 					}
 				},
-				"buff": "消极：",
+				"buff": "被动：",
 				"consumable_buff": "饮用效果:",
 				"injected_buff": "给予状态: ",
 				"inflictable_debuff": "造成状态: ",
@@ -27877,6 +28009,12 @@
 				}
 			},
 			"build_mode": {
+				"fixtures": {
+					"include_craftable": "可制作的",
+					"include_craftable_description": "所有可制作的物品清单",
+					"include_inventory": "库存",
+					"include_inventory_description": "所有库存的物品清单"
+				},
 				"place_item": {
 					"place_item": "从库存中放置",
 					"craft_and_place_item": "制作并放置"
